@@ -1,0 +1,12 @@
+#ifndef SPLASHSCREEN_GLOBAL_H
+#define SPLASHSCREEN_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(SPLASHSCREEN_LIBRARY)
+#  define SPLASHSCREEN_EXPORT Q_DECL_EXPORT
+#else
+#  define SPLASHSCREEN_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // SPLASHSCREEN_GLOBAL_H

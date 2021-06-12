@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/">
+        <file>../assets/fonts/HindVadodara-Medium.ttf</file>
+        <file>../assets/fonts/HindVadodara-Regular.ttf</file>
+        <file>../common/qml/Constants.qml</file>
+        <file>../common/qml/qmldir</file>
+        <file>../assets/icon.ico</file>
+    </qresource>
+</RCC>
