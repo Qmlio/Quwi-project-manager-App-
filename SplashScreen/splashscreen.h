@@ -14,7 +14,7 @@ class SPLASHSCREEN_EXPORT Splashscreen : public QWidget {
 
 public:
   explicit Splashscreen(QWidget *parent = nullptr);
-  ~Splashscreen();
+  ~Splashscreen() override;
 
   void Display(int delay = 5000);
   Q_INVOKABLE void setProgress(int progress);

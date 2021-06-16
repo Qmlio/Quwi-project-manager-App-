@@ -16,10 +16,7 @@ Splashscreen::Splashscreen(QWidget *parent)
 
 Splashscreen::~Splashscreen() { delete ui; }
 
-void Splashscreen::Display(int delay) {
-  // QTimer::singleShot(delay, [this]() { emit finished(); });
-  show();
-}
+void Splashscreen::Display(int delay) { show(); }
 
 void Splashscreen::setProgress(int progress) {
 

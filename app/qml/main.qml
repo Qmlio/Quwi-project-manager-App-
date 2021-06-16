@@ -1,5 +1,5 @@
-import QtQuick 2.0
-import QtQuick.Controls 2.5
+import QtQuick 2.14
+import QtQuick.Controls 2.12
 import QtWebEngine 1.1
 import Quwi.Constants 1.0
 
@@ -20,6 +20,7 @@ Item {
         id: controlColumn
         visible: false
         anchors.centerIn: parent
+        spacing: 16
         Text {
             anchors.horizontalCenter: parent.horizontalCenter
             font.pixelSize: 30
@@ -32,6 +33,7 @@ Item {
             color: Constants.colors.primary_light
             anchors.horizontalCenter: parent.horizontalCenter
             font.family: Constants.primary
+            font.letterSpacing: .5
             text: qsTr("Connection lost, Try again later")
         }
         // spacer

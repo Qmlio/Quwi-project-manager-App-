@@ -8,34 +8,41 @@ Rectangle {
     visible: (opacity > 0.1)
 
     Component.onCompleted: show()
+
     Connections {
         target: splashScreenManager
-        onProgressChanged: {
+
+        function onProgressChanged(progress) {
             if (tempProgress < progress)
                 control.value = progress
 
             tempProgress = progress
         }
     }
+
     Behavior on opacity {
         OpacityAnimator {
             duration: 300
         }
     }
-
-    Text {
-        id: appName
-        font.pixelSize: 32
+    Column {
         anchors.centerIn: parent
-        scale: 1.1
-        opacity: 0
-        font.family: Constants.primary
-        color: Constants.colors.primary
-        anchors.horizontalCenter: parent.horizontalCenter
-        text: qsTr("Quwi Project Manager")
+        spacing: 32
+        Text {
+            id: appName
+            font.pixelSize: 14
+            scale: 1.1
+            opacity: 0
+            font.letterSpacing: 4
+            font.family: Constants.primary
+            color: Constants.colors.primary_light
+            anchors.horizontalCenter: parent.horizontalCenter
+            text: qsTr("Quwi Project Manager")
+        }
     }
 
     ProgressBar {
+        opacity: .2
         id: control
         Behavior on value {
             NumberAnimation {
